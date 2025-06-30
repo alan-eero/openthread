@@ -114,6 +114,9 @@ public:
     void    SendMulticast(otMessage *aMessage, uint32_t aInfraIfIndex);
     void    SendUnicast(otMessage *aMessage, const otPlatMdnsAddressInfo *aAddress);
 
+    void RegisterService(const otPlatMdnsRegisterInfo *aInfo);
+    void UnregisterService(void);
+
 private:
     static constexpr uint16_t kMaxMessageLength  = 2000;
     static constexpr uint16_t kMdnsPort          = 5353;
